@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Online Judiciary System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <style>
+      html, body {
+          overflow-x: hidden;
+      }
+  </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Indian Online Judiciary System</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#cases">Cases</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img1.jpg" alt="Image 1" /></div>
+        <div class="swiper-slide"><img src="img2.jpg" alt="Image 2" /></div>
+        <div class="swiper-slide"><img src="img3.jpg" alt="Image 3" /></div>
+        <!-- Add more slides as needed -->
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="container">
+          <h2>Welcome to the Online Judiciary System</h2>
+          <p>
+            Access judicial services and case information online. The Indian
+            judiciary is hindered by inefficiencies and delays due to manual
+            case management, physical court proceedings, and limited adoption of
+            technology. These issues lead to extended case backlogs, limited
+            access to legal services, especially in rural areas, and a lack of
+            transparency, which undermines public trust. Addressing these
+            challenges requires a strategic shift toward digital transformation
+            and technology-driven solutions to enhance efficiency,
+            accessibility, and accountability in the judicial system.
+          </p>
+        </div>
+      <section id="services" class="services-section">
+        <div class="container">
+          <h2>Our Services</h2>
+          <div class="services-list">
+            <a href="#caseFilingForm" class="service-item">
+              <i class="fas fa-gavel"></i>
+              <h3>Case Filing</h3>
+              <p>Easily file your cases online with our secure system.</p>
+            </a>
+            <a href="#caseStatusForm" class="service-item">
+              <i class="fas fa-balance-scale"></i>
+              <h3>Case Status Tracking</h3>
+              <p>Track the status of your cases in real-time.</p>
+            </a>
+            <a href="#legalResourcesForm" class="service-item">
+              <i class="fas fa-book"></i>
+              <h3>Legal Resources</h3>
+              <p>Access a wide range of legal resources and documents.</p>
+            </a>
+            <a href="#onlineConsultationForm" class="service-item">
+              <i class="fas fa-comments"></i>
+              <h3>Online Consultation</h3>
+              <p>Get online consultations with legal experts.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div id="caseFilingForm" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Case Filing Form</h2>
+          <form id="caseFiling">
+            <label for="caseTitle">Case Title:</label>
+            <input type="text" id="caseTitle" name="caseTitle" required />
+            <label for="complainantName">Complainant Name:</label>
+            <input type="text" id="complainantName" name="complainantName" required />
+            <label for="respondentName">Respondent Name:</label>
+            <input type="text" id="respondentName" name="respondentName" required />
+            <label for="caseDetails">Case Details:</label>
+            <textarea id="caseDetails" name="caseDetails" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      
+      <div id="caseStatusForm" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Case Status Tracking Form</h2>
+          <form id="caseStatusTracking">
+            <label for="caseNumber">Case Number:</label>
+            <input type="text" id="caseNumber" name="caseNumber" required />
+            <button type="submit">Track</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="legalResourcesForm" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Legal Resources Form</h2>
+          <form id="legalResources">
+            <label for="resourceType">Resource Type:</label>
+            <input type="text" id="resourceType" name="resourceType" required />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="onlineConsultationForm" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Online Consultation Form</h2>
+          <form id="onlineConsultation">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="query">Query:</label>
+            <textarea id="query" name="query" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <section id="cases" class="cases-section">
+        <div class="container">
+          <h2>Recent Cases</h2>
+          <div class="cases-table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Case Number</th>
+                  <th>Parties</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12345</td>
+                  <td>John Doe vs. State</td>
+                  <td>Pending</td>
+                  <td>2023-01-01</td>
+                </tr>
+                <tr>
+                  <td>12346</td>
+                  <td>Jane Smith vs. City</td>
+                  <td>Closed</td>
+                  <td>2023-02-02</td>
+                </tr>
+                <!-- Additional rows can be added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Feedback Form Modal -->
+    <div id="feedbackModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Feedback</h2>
+        <form id="feedbackForm">
+          <label for="feedbackMessage">Your Feedback:</label>
+          <textarea
+            id="feedbackMessage"
+            name="feedbackMessage"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <button id="feedbackBtn">Give Feedback</button>
+        <p>&copy; 2024 Indian Online Judiciary System. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

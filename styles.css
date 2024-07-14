@@ -1,0 +1,370 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  position: relative;
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #3e8e41;
+}
+
+main {
+  padding: 120px 0 20px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 420px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+}
+
+.hero-section {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 100px 20px;
+  margin-top: 60px;
+}
+
+.hero-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Services section */
+.services-section {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 23%;
+  margin: 10px 0;
+  text-align: center;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item i {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+/* Style for modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Optional: Add animation for modal */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply animation to modal */
+.modal-content {
+  animation: modalFadeIn 0.3s;
+}
+
+.modal[style*="display: none;"] .modal-content {
+  animation: modalFadeOut 0.3s;
+}
+
+/* Form styling */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form textarea {
+  height: 100px;
+}
+
+form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+.cases-section .cases-table-container {
+  overflow-x: auto;
+}
+
+.cases-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cases-section table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+.cases-section th,
+.cases-section td {
+  padding: 10px;
+  text-align: left;
+}
+
+.cases-section th {
+  background-color: #f2f2f2;
+}
+
+.contact-section form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-section form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-section form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-section form button:hover {
+  background-color: #45a049;
+}
+
+/* Feedback Form Modal */
+#feedbackForm {
+  margin-top: 20px;
+}
+
+#feedbackForm label,
+#feedbackForm textarea,
+#feedbackForm button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#feedbackForm textarea {
+  height: 100px;
+}
+
+#feedbackForm button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#feedbackForm button:hover {
+  background-color: #45a049;
+}
+
+/* Floating Feedback Button */
+#feedbackBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+#feedbackBtn:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
